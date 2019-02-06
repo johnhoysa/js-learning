@@ -2,7 +2,7 @@
 
 let feedMeContnet = document.querySelector("#feedMeContnet");
 
-var myData = {
+var superData = {
   squadName: "Super hero squad",
   homeTown: "Metro City",
   formed: 2016,
@@ -27,7 +27,7 @@ var myData = {
     },
     {
       name: "Eternal Flame",
-      age: 100,
+      age: 77,
       secretIdentity: "Unknown",
       powers: [
         "Immortality",
@@ -36,19 +36,54 @@ var myData = {
         "Teleportation",
         "Interdimensional travel"
       ]
+    },
+    {
+      name: "People Power",
+      age: "unknown",
+      secretIdentity: "It's them over there",
+      powers: ["Morality", "Compassion", "Empathy", "Togetherness", "Community"]
+    }
+  ]
+};
+
+var villianData = {
+  squadName: "Villians United",
+  homeTown: "Trumpville",
+  formed: 2016,
+  secretBase: "Super Tower",
+  active: true,
+  members: [
+    {
+      name: "Spam Man",
+      age: 46,
+      secretIdentity: "Ben Dover",
+      powers: ["Robo Call", "Chain Letters"]
+    },
+    {
+      name: "Mad Villian",
+      age: 58,
+      secretIdentity: "That Guy",
+      powers: ["none"]
+    },
+    {
+      name: "Fire Proof",
+      age: 90,
+      secretIdentity: "Unknown",
+      powers: ["Can lie without pants catching on fire"]
     }
   ]
 };
 
 var theVillian = "The Mad Villian";
+
 function displayContnet() {
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < superData.members.length; i++) {
     feedMeContnet.innerHTML += `
     <div class="round">
-    <p>My name is ${myData.members[i].name} </p>
-    <p>My age is ${myData.members[i].age} </p>
+    <p>My name is ${superData.members[i].name} </p>
+    <p>My age is ${superData.members[i].age} </p>
     <p>My secret identity is ${
-      myData.members[i].secretIdentity
+      superData.members[i].secretIdentity
     } but don't tell ${theVillian}, I don't trust him. </p>
     </div>
   `;
