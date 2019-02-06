@@ -1,17 +1,19 @@
 //Orig Tutorial: https://davidwalsh.name/merge-objects
-//Still needing to make time to play with different data.
 
-const person = { name: "David Walsh", gender: "Male" };
-const tools = { computer: "Mac", editor: "Atom" };
-const attributes = { handsomeness: "Extreme", hair: "Brown", eyes: "Blue" };
+const person = { name: "John Hoysa", gender: "Male", age: "39" };
+const tools = {
+  computer: "Mac",
+  editor: "VS Code",
+  phone: "iPhone",
+  vehicle: "car"
+};
+const attributes = {
+  height: "Tall",
+  hair: "Dark",
+  eyes: "Brown",
+  inShape: true
+};
 
 const summary = { ...person, ...tools, ...attributes };
 
 console.log(summary);
-
-const person1 = { name: "David Walsh", age: 33 };
-const person2 = { name: "David Walsh Jr.", role: "Junior Designer" };
-
-const merged = { ...person1, ...person2 };
-
-console.log(merged);
