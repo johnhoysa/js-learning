@@ -84,8 +84,12 @@ function displayContnet() {
   for (i = 0; i < superData.members.length; i++) {
     feedMeContnet.innerHTML += `
     <div class="superHero">
-    <p>${superData.members[i].name}</p>
-    <p>Watch out for ${superData.members[i].pronoun} ${superData.members[i].powers}</p>
+      <p>${superData.members[i].name}</p>
+      <p>Watch out for ${superData.members[i].pronoun} ${superData.members[i].powers}</p>
+    </div>
+    <div class="villians">
+      <p>${villianData.members[i].name}</p>
+      <p>Watch out for ${villianData.members[i].pronoun} ${villianData.members[i].powers}</p>
     </div>
   `;
   }

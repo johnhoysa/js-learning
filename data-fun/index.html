@@ -5,14 +5,20 @@
     <title>JavaScript Playing</title>
   </head>
   <style>
-    /* Page specific styles */
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: 32px;
+    }
 
-    /* CSS realated to various JS files */
-    .round {
-      border: 1px solid #ddd;
-      border-radius: 3px;
-      margin-bottom: 24px;
-      padding: 16px;
+    h1 {
+      grid-column: span 12;
+    }
+    .superHero {
+      grid-column: 1 / 6;
+    }
+    .villians {
+      grid-column: 6 / 13;
     }
   </style>
   <body>
