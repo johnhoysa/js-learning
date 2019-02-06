@@ -27,7 +27,7 @@ var superData = {
     },
     {
       name: "Eternal Flame",
-      age: 100,
+      age: 77,
       secretIdentity: "Unknown",
       powers: [
         "Immortality",
@@ -39,7 +39,7 @@ var superData = {
     },
     {
       name: "People Power",
-      age: 100,
+      age: "unknown",
       secretIdentity: "It's them over there",
       powers: ["Morality", "Compassion", "Empathy", "Togetherness", "Community"]
     }
@@ -67,9 +67,9 @@ var villianData = {
     },
     {
       name: "Fire Proof",
-      age: 100,
+      age: 90,
       secretIdentity: "Unknown",
-      powers: ["Can lie without pants catching on fire", "Creator of Alt-Facts"]
+      powers: ["Can lie without pants catching on fire"]
     }
   ]
 };
