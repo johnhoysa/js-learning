@@ -1,90 +1,91 @@
 // Orig tutorial https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
-let feedMeContnet = document.querySelector("#feedMeContnet");
+let feedMeContnet = document.querySelector('#feedMeContnet');
 
 var superData = {
-  squadName: "Super hero squad",
-  homeTown: "Metro City",
+  squadName: 'The Super Squad',
+  homeTown: 'Metro City',
   formed: 2016,
-  secretBase: "Super tower",
+  secretBase: 'Bat Cave',
   active: true,
   members: [
     {
-      name: "Molecule Man",
+      name: 'Molecule Man',
       age: 29,
-      secretIdentity: "Dan Jukes",
-      powers: ["Radiation resistance", "Turning tiny", "Radiation blast"]
+      pronoun: 'his',
+      secretIdentity: 'Dan Jukes',
+      powers: ['Radiation resistance', ' Turning tiny', ' Radiation blast']
     },
     {
-      name: "Madame Uppercut",
+      name: 'Madame Haymaker',
       age: 39,
-      secretIdentity: "Jane Wilson",
-      powers: [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
+      pronoun: 'her',
+      secretIdentity: 'Jane Wilson',
+      powers: ['Mean right hook', ' Super strength', ' Superhuman reflexes']
     },
     {
-      name: "Eternal Flame",
+      name: 'Eternal Flame',
       age: 77,
-      secretIdentity: "Unknown",
-      powers: [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
+      pronoun: 'her',
+      secretIdentity: 'Jenny Block',
+      powers: ['Immortality', ' Heat Immunity', ' Inferno Punch', ' Interdimensional travel']
     },
     {
-      name: "People Power",
-      age: "unknown",
-      secretIdentity: "It's them over there",
-      powers: ["Morality", "Compassion", "Empathy", "Togetherness", "Community"]
+      name: 'Penelope Power',
+      age: 1342,
+      pronoun: 'their',
+      secretIdentity: 'The People',
+      powers: ['Morality', ' Compassion', ' Empathy', ' Togetherness', ' Community']
     }
   ]
 };
 
 var villianData = {
-  squadName: "Villians United",
-  homeTown: "Trumpville",
+  squadName: 'Villians United',
+  homeTown: 'Big Business',
   formed: 2016,
-  secretBase: "Super Tower",
+  secretBase: 'Super Tower',
   active: true,
   members: [
     {
-      name: "Spam Man",
+      name: 'Spam Man',
       age: 46,
-      secretIdentity: "Ben Dover",
-      powers: ["Robo Call", "Chain Letters"]
+      pronoun: 'his',
+      secretIdentity: 'Ben Dover',
+      powers: ['Robo Call', ' Chain Letters']
     },
     {
-      name: "Mad Villian",
+      name: 'Mad Villian',
       age: 58,
-      secretIdentity: "That Guy",
-      powers: ["none"]
+      pronoun: 'his',
+      secretIdentity: 'That Guy',
+      powers: ['Mad']
     },
     {
-      name: "Fire Proof",
+      name: 'Fire Proof',
       age: 90,
-      secretIdentity: "Unknown",
-      powers: ["Can lie without pants catching on fire"]
+      pronoun: 'her',
+      secretIdentity: 'Unknown',
+      powers: ['Can lie without pants catching on fire', ' Smarty Pants']
+    },
+    {
+      name: 'Untouchable',
+      age: 64,
+      pronoun: 'his',
+      secretIdentity: 'That Guy',
+      powers: ['Slippery', 'Slick']
     }
   ]
 };
 
-var theVillian = "The Mad Villian";
-
 function displayContnet() {
+  feedMeContnet.innerHTML += `<h1><span>Next Saturday</span>${superData.squadName} vs ${villianData.squadName}</h1>`;
+
   for (i = 0; i < superData.members.length; i++) {
     feedMeContnet.innerHTML += `
-    <div class="round">
-    <p>My name is ${superData.members[i].name} </p>
-    <p>My age is ${superData.members[i].age} </p>
-    <p>My secret identity is ${
-      superData.members[i].secretIdentity
-    } but don't tell ${theVillian}, I don't trust him. </p>
+    <div class="superHero">
+    <p>${superData.members[i].name}</p>
+    <p>Watch out for ${superData.members[i].pronoun} ${superData.members[i].powers}</p>
     </div>
   `;
   }
