@@ -2,6 +2,9 @@
 
 let feedMeContnet = document.querySelector('#feedMeContnet');
 
+import { renderTitle } from './content-templates';
+const buffer = renderTitle(model);
+
 var superData = {
   squadName: 'The Super Squad',
   homeTown: 'Metro City',
@@ -79,7 +82,7 @@ var villianData = {
 };
 
 function displayContnet() {
-  feedMeContnet.innerHTML += `<h1><span>Next Saturday</span>${superData.squadName} vs ${villianData.squadName}</h1>`;
+  buffer;
 
   for (i = 0; i < superData.members.length; i++) {
     feedMeContnet.innerHTML += `
