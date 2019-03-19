@@ -16,7 +16,7 @@ var superData = {
       name: 'Molecule Man',
       age: 29,
       pronoun: 'his',
-      secretIdentity: 'Dan Jukes',
+      secretIdentity: 'Danny Jukes',
       powers: ['Radiation resistance', ' Turning tiny', ' Radiation blast']
     },
     {
