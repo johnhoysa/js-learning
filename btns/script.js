@@ -14,7 +14,7 @@ for (let btn of btns) {
     const btnTextContent = this.textContent;
     selectedBtn.innerHTML = `
     <div class="round">
-    <p>${btnTextContent}, ${btn.dataset.price} </p>
+      <p>${btnTextContent}, ${btn.dataset.price} </p>
     </div>
   `;
   };
