@@ -1,7 +1,5 @@
 let toggleList = document.querySelector('.toggle-list-view');
-
 let toggleGrid = document.querySelector('.toggle-grid-view');
-
 let tileWrap = document.querySelector('.content-wrap');
 
 toggleList.onclick = function() {
