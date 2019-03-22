@@ -14,18 +14,27 @@
     .button-wrap {
       margin: 10px;
     }
-    .change-view {
+
+    .list-view .productTile {
+      grid-column: span 12;
+    }
+
+    .grid-view .productTile {
+      grid-column: span 3;
+    }
+
+    .productTile {
       border: 1px solid red;
       margin: 10px;
       padding: 20px;
     }
 
-    .list-view {
-      grid-column: span 12;
+    .list-view > .productTile {
+      border: 1px solid blueviolet;
     }
-
-    .grid-view {
-      grid-column: span 3;
+    .grid-view > .productTile {
+      border: 3px dashed peru;
+      padding: 10px;
     }
     .toggle-grid-view,
     .toggle-list-view {
@@ -45,28 +54,28 @@
       <div class="toggle-list-view">List View</div>
     </div>
 
-    <div class="content-wrap">
-      <div class="change-view grid-view">
+    <div class="content-wrap list-view">
+      <div class="productTile">
         <p>Content area 1</p>
         <p>Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
       </div>
-      <div class="change-view grid-view">
+      <div class="productTile">
         <p>Content area 2</p>
         <p>Denean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci.</p>
       </div>
-      <div class="change-view grid-view">
+      <div class="productTile">
         <p>Content area 3</p>
         <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat</p>
       </div>
-      <div class="change-view grid-view">
+      <div class="productTile">
         <p>Content area 4</p>
         <p>Kenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum.</p>
       </div>
-      <div class="change-view grid-view">
+      <div class="productTile">
         <p>Content area 5</p>
         <p>>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
-      <div class="change-view grid-view">
+      <div class="productTile">
         <p>Content area 6</p>
         <p>Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctua.</p>
       </div>
