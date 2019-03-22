@@ -1,13 +1,13 @@
 let toggleList = document.querySelector('.toggle-list-view');
 let toggleGrid = document.querySelector('.toggle-grid-view');
-let tileWrap = document.querySelector('.content-wrap');
+let contentWrap = document.querySelector('.content-wrap');
 
 toggleList.onclick = function() {
-  tileWrap.classList.add('list-view');
-  tileWrap.classList.remove('grid-view');
+  contentWrap.classList.add('list-view');
+  contentWrap.classList.remove('grid-view');
 };
 
 toggleGrid.onclick = function() {
-  tileWrap.classList.add('grid-view');
-  tileWrap.classList.remove('list-view');
+  contentWrap.classList.add('grid-view');
+  contentWrap.classList.remove('list-view');
 };

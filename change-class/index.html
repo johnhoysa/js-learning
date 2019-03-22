@@ -33,13 +33,21 @@
 
     .list-view .productTile {
       grid-column: span 12;
-      border: 1px solid blueviolet;
+      border-color: blueviolet;
     }
 
     .grid-view .productTile {
       grid-column: span 3;
       border: 3px dashed peru;
       padding: 10px;
+    }
+
+    .productTile__title {
+      font-size: 24px;
+    }
+
+    .grid-view .productTile__title {
+      font-size: 14px;
     }
   </style>
   <body>
@@ -50,10 +58,10 @@
       <div class="toggle-list-view">List View</div>
     </div>
 
-    <div class="content-wrap list-view">
+    <div class="content-wrap grid-view">
       <div class="productTile">
-        <p>Content area 1</p>
-        <p>Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+        <p class="productTile__title">Content area 1</p>
+        <p class="productTile__copy">Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
       </div>
       <div class="productTile">
         <p>Content area 2</p>
