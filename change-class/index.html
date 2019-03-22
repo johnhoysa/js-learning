@@ -10,32 +10,11 @@
       grid-template-columns: repeat(12, 1fr);
       grid-column-gap: 32px;
     }
-
+    /* holds grid and list button */
     .button-wrap {
       margin: 10px;
     }
 
-    .list-view .productTile {
-      grid-column: span 12;
-    }
-
-    .grid-view .productTile {
-      grid-column: span 3;
-    }
-
-    .productTile {
-      border: 1px solid red;
-      margin: 10px;
-      padding: 20px;
-    }
-
-    .list-view > .productTile {
-      border: 1px solid blueviolet;
-    }
-    .grid-view > .productTile {
-      border: 3px dashed peru;
-      padding: 10px;
-    }
     .toggle-grid-view,
     .toggle-list-view {
       cursor: pointer;
@@ -44,6 +23,23 @@
     .toggle-grid-view:hover,
     .toggle-list-view:hover {
       color: #ccc;
+    }
+
+    .productTile {
+      border: 1px solid red;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    .list-view .productTile {
+      grid-column: span 12;
+      border: 1px solid blueviolet;
+    }
+
+    .grid-view .productTile {
+      grid-column: span 3;
+      border: 3px dashed peru;
+      padding: 10px;
     }
   </style>
   <body>
