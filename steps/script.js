@@ -20,7 +20,7 @@ $(document).on('click', '.goToStepTwo', function(event) {
     .removeClass('mobileIsActive');
   $('#stepTwo,#stepTwoContent, .stepTwoMobile').addClass('mobileIsActive');
   return false;
-  event.preventDefault();
+
 });
 //Go To Step Three
 $(document).on('click', '.goToStepThree', function(event) {
@@ -68,5 +68,32 @@ $(document).on('click', '.active.closed', function(event) {
   $(this)
     .addClass('open')
     .removeClass('closed');
+  event.preventDefault();
+});
+
+//Mobile click step and see content
+$(document).on('click', '.stepTwoMobile', function(event) { 
+  //hide step 1 and 3
+  //Desktop
+  $('#stepTwo')
+    .removeClass('deactive closed')
+    .addClass('active open');
+  $('#stepTwoContent')
+    .addClass('show')
+    .removeClass('deactive__content closed hide')
+    .addClass('active__content');
+  $('html, body').animate(
+    {
+      scrollTop: $('#stepTwo').offset().top
+    },
+    400
+  );
+  //Mobile
+  $('#stepOne, #stepOneContent, .stepOneMobile, #stepThree, #stepThreeContent, .stepThreeMobile')
+    .addClass('mobileNotActive')
+    .removeClass('mobileIsActive');
+  //show step 2
+  $('#stepTwo,#stepTwoContent, .stepTwoMobile').addClass('mobileIsActive');
+  return false;
   event.preventDefault();
 });
