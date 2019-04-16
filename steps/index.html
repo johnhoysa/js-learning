@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>accordion like thing</title>
+  </head>
+  <style>
+    div {
+      width: 40%;
+    }
+    #mobileNav {
+      display: none;
+    }
+
+    .mobileNotActive {
+      display: block;
+    }
+    .active {
+      display: block;
+      color: cornflowerblue;
+    }
+    .active__content {
+      display: block;
+    }
+    .deactive__content {
+      display: block;
+    }
+    .deactive {
+      color: grey;
+    }
+    .deactive__content {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+    @media (max-width: 787px) {
+      #mobileNav {
+        display: block;
+      }
+      #mobileNav ul {
+        display: flex;
+        list-style-type: none;
+      }
+      .stepMobile {
+        border-radius: 50%;
+        border: 3px solid grey;
+        width: 24px;
+        height: 24px;
+        margin-right: 24px;
+        text-align: center;
+      }
+      #stepTwo,
+      #stepThree {
+        display: none;
+      }
+      .mobileNotActive {
+        display: none;
+      }
+      li.mobileNotActive {
+        display: block;
+        border-color: grey;
+      }
+      .mobileIsActive {
+        display: block;
+      }
+      li.mobileIsActive {
+        border-color: green;
+      }
+    }
+  </style>
+  <body>
+    <div id="mobileNav">
+      <ul>
+        <li class="stepMobile stepOneMobile mobileIsActive">1</li>
+        <li class="stepMobile  stepTwoMobile ">2</li>
+        <li class="stepMobile  stepThreeMobile ">3</li>
+      </ul>
+    </div>
+    <div id="stepOne" class="active open">I am step 1 header</div>
+    <div id="stepOneContent" class="active__content">
+      <h4>Step 1</h4>
+      <ul>
+        <li class="goToStepTwo"><a href="">Click for step 2 active</a></li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li class="goToStepTwo"><a href="">Click for step 2 active</a></li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li class="goToStepTwo"><a href="">Click for step 2 active</a></li>
+      </ul>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+        semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+        fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
+        neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+      </p>
+    </div>
+    <div id="stepTwo" class="deactive closed">I am step 2 header</div>
+    <div id="stepTwoContent" class="deactive__content">
+      <h4>Step Two</h4>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+        semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+        fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
+        neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+      </p>
+      <ul>
+        <li class="goToStepThree"><a href="">Click for step 3 active</a></li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li class="goToStepThree"><a href="">Click for step 3 active</a></li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li class="goToStepThree"><a href="">Click for step 3 active</a></li>
+      </ul>
+    </div>
+    <div id="stepThree" class="deactive closed">I am step 3 header</div>
+    <div id="stepThreeContent" class="deactive__content">
+      <h4>Step 3</h4>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+        semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+        fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
+        neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+      </p>
+      <ul>
+        <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+        <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+        <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+        <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+      </ul>
+    </div>
+  </body>
+  <!-- Using jQuery since has animations built in. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="script.js"></script>
+</html>
