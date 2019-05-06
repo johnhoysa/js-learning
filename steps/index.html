@@ -72,8 +72,141 @@
         border-color: green;
       }
     }
+
+    .my-grid-with-container {
+      display: grid;
+      height: 200px;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: 32px;
+      align-items: center;
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 0 16px;
+      width: 100%;
+      position: relative;
+      margin: $top auto $bottom auto;
+      box-sizing: border-box;
+      background-color: red;
+    }
+    @media (min-width: 576px) {
+      .my-grid-with-container {
+        max-width: 100%;
+        background-color: blue;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .my-grid-with-container {
+        max-width: 100%;
+        background-color: green;
+      }
+    }
+
+    @media (min-width: 990px) {
+      .my-grid-with-container {
+        max-width: 990px;
+        background-color: pink;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .my-grid-with-container {
+        max-width: 1152px;
+        background-color: black;
+      }
+    }
+
+    .my-grid {
+      display: grid;
+      height: 200px;
+      width: 100%;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: 32px;
+      align-items: center;
+      background-color: red;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 0 16px;
+      width: 100%;
+      position: relative;
+      margin: $top auto $bottom auto;
+      box-sizing: border-box;
+    }
+    @media (min-width: 576px) {
+      .my-grid {
+        background-color: blue;
+      }
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .my-grid {
+        background-color: green;
+        .container {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 990px) {
+      .my-grid {
+        background-color: pink;
+      }
+      .container {
+        max-width: 990px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .my-grid {
+        background-color: black;
+      }
+      .container {
+        max-width: 1152px;
+      }
+    }
+
+    .tile {
+      border: 1px solid green;
+      color: white;
+      padding: 16px;
+      grid-column: span 3;
+      width: 100%;
+      box-sizing: border-box;
+    }
   </style>
   <body>
+    <div class="my-grid-with-container">
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+    </div>
+
+    <div class="container my-grid">
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+      <div class="tile">I am a tile</div>
+    </div>
+
+    <div class="container">
+      <div class="my-grid">
+        <div class="tile">I am a tile</div>
+        <div class="tile">I am a tile</div>
+        <div class="tile">I am a tile</div>
+        <div class="tile">I am a tile</div>
+        <div class="tile">I am a tile</div>
+      </div>
+    </div>
+
     <div id="mobileNav">
       <ul>
         <li class="stepMobile stepOneMobile mobileIsActive">1</li>
