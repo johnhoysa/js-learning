@@ -1,65 +1,50 @@
-//Create variable for json data
-const requestURL = "https://ecn1.eshop2.macsales.com/api/used-macs/config/?item=UAQA1JS6XXX10XI";
+let searchID = document.querySelectorAll("[data-search-spring-id]");
 
-const requestMac = new XMLHttpRequest();
-requestMac.open("GET", requestURL);
-requestMac.responseType = "text";
-requestMac.send();
+for (let i = 0; i < searchID.length; i++) {
+  searchID[i].getAttribute("data-search-spring-id");
 
-requestMac.onload = function() {
-  const usedMacRepsonse = requestMac.response;
-  const systemInfo = JSON.parse(usedMacRepsonse);
-  heroUnit(systemInfo);
-  highlights(systemInfo)
+  let ssID = searchID[i].getAttribute("data-search-spring-id");
+  let ssDisplay = searchID[i].getAttribute("data-search-spring-display-type");
 
-};
-
-function heroUnit(jsonObj) {
-  const systemInfo = jsonObj;
-  //console.log(systemInfo);
   //
+  let apiPath =
+    "https://eshop.macsales.com/api/search/featured/?tag=" +
+    ssID +
+    "&displayType=" +
+    ssDisplay;
 
-  usedMacs.innerHTML += `
-  <div class="hero">
-    <h1>${systemInfo.machineHeadline}</h1>
-    <p>${systemInfo.systems[0].systemDetails}</p>
-    <p>${systemInfo.systems[0].options[1].optionGroupLabel}</p>
-    <p>${systemInfo.systems[0].options[1].optionValues[0].label}</p>
-    
-  </div>
-  `;
-}
+  fetch(apiPath)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(ssJson) {
+      myCode(ssJson);
+    })
+    .catch(function(error) {
+      console.log(
+        "There has been a problem with your fetch operation: ",
+        error.message
+      );
+    });
 
+  function myCode(ssJson) {
+    let data = ssJson;
 
-//Variables I need to use in the below loop
-//Best practice of location not sure of but I would think its at top of page 
-let highlightLabel = '';
-let highlightValue = '';
-let highlightList = '';
-//
-function highlights(jsonObj){
-  const systemInfo = jsonObj;
-  console.log(systemInfo.highlights.length);
-  for (let i = 0; i < systemInfo.highlights.length; i++) {
-    highlightLabel = '<p>' + systemInfo.highlights[i].label + '</p>';
-    highlightValue = '';
-    //
-    for (let j = 0; j < systemInfo.highlights[i].values.length; j++) {
-      console.log('line 47', systemInfo.highlights[i].values[j]);
-      //highlightValue += '<li>' + systemInfo.highlights[i].values[j] + '</li>';
+    for (let j = 0; j < 4; j++) {
+      searchID[i].innerHTML += `
+        <a href="${data[j].infoURL}" class="product-grid__prod">
+          <div class="product-grid__content">
+            <h4 class="product-grid__heading">${data[j].name}</h4>
+            <p class="product-grid__copy">${data[j].description}</p>
+            <p class="product-grid__orig-price">what goes here</p>
+            <p class="product-grid__price">${data[j].price.value}</p>
+            <p class="product-grid__savings">SAVE $100.01</p>
+          </div>
+          <div class="product-grid__img-wrap">
+            Image Here
+          </div>
+        </a>
+    `;
     }
-    //loop through label and create list under it.
-    highlightList +=`
-    ${highlightLabel}
-    <ul class="highlights-items">${highlightValue}</ul>
-  `;
-   
   }
-  usedMacs.innerHTML +=`
-    <div class="container">
-      <div class="highlights">
-        ${highlightList}
-      </div>
-    </div>
-  `;
 }
