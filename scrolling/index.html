@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<style>
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+
+  body {
+    line-height: 1;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  blockquote,
+  q {
+    quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+
+  #wrap {
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: chocolate;
+    position: relative;
+    margin: 0;
+    padding: 16px;
+    height: 3000px
+  }
+
+  #pageWidthLTR {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: darkgoldenrod;
+    height: 16px;
+  }
+
+  #pageWidthRTL {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    background-color: crimson;
+    height: 16px;
+    width: 100%;
+  }
+
+
+  #square {
+    position: fixed;
+    top: 80px;
+    left: 40px;
+    width: 104px;
+    height: 104px;
+    background-color: brown;
+    border-radius: 4px;
+  }
+
+  #square:before {
+    content: '1';
+  }
+
+  #squareReverse {
+    position: fixed;
+    top: 48px;
+    left 24px;
+    width: 160px;
+    height: 160px;
+    background-color: darkmagenta;
+    border-radius: 4px;
+  }
+
+  #squareReverse:before {
+    content: '2';
+  }
+
+  #height {
+    position: fixed;
+    top: 48px;
+    left: 400px;
+    width: 40px;
+    height: 100px;
+    border-radius: 4px;
+    opacity: 0;
+    background: #DA4453;
+    background: linear-gradient(to top, #89216B, chocolate);
+  }
+
+  #bounce {
+    position: fixed;
+    top: 350px;
+    left: 24px;
+    width: 40px;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    background: #DA4453;
+  }
+</style>
+<html>
+
+<body>
+  <div id="wrap">
+    <div id="pageWidthLTR"></div>
+    <div id="pageWidthRTL"></div>
+    <div id="squareReverse"></div>
+    <div id="square"></div>
+    <div id="height"></div>
+    <div id="bounce"></div>
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>

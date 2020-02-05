@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="apple-mobile-web-app-title" content="Just Some Fun" />
+
+    <title>
+      Fork From - Big cubes animation with SVG &lt;use&gt; and CSS variables
+    </title>
+    <style>
+      html,
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1;
+        width: 100%;
+        hieght: 100%;
+      }
+
+      .wrap {
+        padding-top: 200px;
+        height: 1000px;
+        max-width: 300px;
+      }
+      .sticky-as-well {
+        position: sticky;
+        top: 0;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .cube-unit {
+        fill-opacity: 0.9;
+        stroke-miterlimit: 0;
+      }
+
+      .cube-wrap {
+        width: 400px;
+        margin: 0 auto;
+        position: sticky;
+        top: 0;
+        overflow: visible;
+      }
+
+      .pink-cube {
+        --mainColor: #de0063;
+        --strokeColor: #ad004e;
+        --lightColor: #fa0070;
+        --darkColor: #c7005a;
+        overflow: visible;
+      }
+    </style>
+  </head>
+
+  <body translate="no">
+    <div class="wrap">
+      <svg
+        id="pinkCube"
+        class="pink-cube"
+        viewBox="0 0 300 230"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <defs>
+          <g id="cube" class="cube-unit">
+            <rect
+              width="21"
+              height="24"
+              fill="var(--lightColor)"
+              stroke="var(--strokeColor)"
+              transform="skewY(30)"
+            />
+            <rect
+              width="21"
+              height="24"
+              fill="var(--darkColor)"
+              stroke="var(--strokeColor)"
+              transform="skewY(-30) translate(21 24.3)"
+            />
+            <rect
+              width="21"
+              height="21"
+              fill="var(--mainColor)"
+              stroke="var(--strokeColor)"
+              transform="scale(1.41,.81) rotate(45) translate(0 -21)"
+            />
+          </g>
+        </defs>
+        <line
+          opacity=".5"
+          x1="80"
+          x2="100"
+          y1="150"
+          y2="150"
+          fill="none"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke="var(--lightColor)"
+          stroke-dasharray="2.5"
+        />
+        <line
+          opacity=".5"
+          x1="186"
+          x2="204"
+          y1="90"
+          y2="90"
+          fill="none"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke="var(--lightColor)"
+          stroke-dasharray="2.5"
+        />
+        <line
+          opacity=".5"
+          x1="115"
+          x2="115"
+          y1="75"
+          y2="85"
+          fill="none"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke="var(--lightColor)"
+          stroke-dasharray="2.5"
+        />
+        <use class="m-left" xlink:href="#cube" x="121" y="112" />
+        <use xlink:href="#cube" x="100" y="124" />
+        <use xlink:href="#cube" x="142" y="124" />
+        <use xlink:href="#cube" x="121" y="136" />
+        <use class="m-left" xlink:href="#cube" x="79" y="136" />
+        <use xlink:href="#cube" x="163" y="136" />
+        <use xlink:href="#cube" x="142" y="148" />
+        <use xlink:href="#cube" x="100" y="148" />
+        <use xlink:href="#cube" x="121" y="160" />
+        <use xlink:href="#cube" x="121" y="88" />
+        <use class="m-left" xlink:href="#cube" x="100" y="100" />
+        <use xlink:href="#cube" x="142" y="100" />
+        <use xlink:href="#cube" x="121" y="112" />
+        <use xlink:href="#cube" x="79" y="112" />
+        <use xlink:href="#cube" x="163" y="112" />
+        <line
+          opacity=".5"
+          x1="165"
+          x2="185"
+          y1="155"
+          y2="155"
+          fill="none"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke="var(--lightColor)"
+          stroke-dasharray="2.5"
+        />
+        <use class="m-right" xlink:href="#cube" x="142" y="124" />
+        <use xlink:href="#cube" x="100" y="124" />
+        <use xlink:href="#cube" x="121" y="136" />
+        <use xlink:href="#cube" x="121" y="64" />
+        <use class="m-up" xlink:href="#cube" x="100" y="76" />
+        <use xlink:href="#cube" x="142" y="76" />
+        <use xlink:href="#cube" x="121" y="88" />
+        <use xlink:href="#cube" x="79" y="88" />
+        <use class="m-right" xlink:href="#cube" x="163" y="88" />
+        <use xlink:href="#cube" x="142" y="100" />
+        <use xlink:href="#cube" x="100" y="100" />
+        <use xlink:href="#cube" x="121" y="112" />
+      </svg>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
